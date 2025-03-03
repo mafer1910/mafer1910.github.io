@@ -186,7 +186,10 @@ header.abierto{
     box-shadow: 4px 4px 8px gray;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    position: relative;
+    text-align: center;
+    left: 16.5%;
+    width: 50rem;
     color: white;
     font-size: 1.8rem;
     line-height: 60px;
@@ -259,3 +262,18 @@ footer .copyright {
     text-align: center;
     font-size: 0.5rem;
 }
+
+/*contacto*/
+.contactanos img{
+    margin-top: 13vw;
+    position: relative;
+    left: 48%;
+    height: 4vw;
+}
+.contactanos #logo img{
+    margin-top: 1vw;
+    position: relative;
+    left: 40%;
+    height: 20vw;
+}
+
