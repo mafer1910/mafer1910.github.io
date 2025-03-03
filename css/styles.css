@@ -1,0 +1,261 @@
+/*generales*/
+@font-face {
+    font-family: "Lilita One";
+    src: url('../fonts/LilitaOne-Regular.ttf');
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+html{
+    font-size: 20px;
+}
+@media(max-width:440px){
+    html{
+        font-size: 18px;
+    }
+}
+body{
+    font-family: "Lilita One",serif;
+    color: #f58823;
+}
+img{
+    max-width: 100%;
+}
+p{
+    margin-bottom: 0.8rem;
+}
+h1{
+    margin-top: 10vw;
+    font-family: "Lilita One",serif;
+    color: #f58823;
+    font-size: 9vw; 
+}
+h3{
+    margin-top: 2vw;
+    font-family: "Lilita One",serif;
+    color: #f58823;
+    font-size: 9vw; 
+}
+p{
+    font-family: "Roboto",serif;
+    color: gray;
+}
+header{
+    background-color: white;
+    box-shadow: 1.5px 1.5px 4px #b3b3b3;
+    height: 10vw;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em; 
+    transition: 600ms all ease-in-out;
+}
+header img{
+    height: 13vw;
+    width: auto;
+}
+header nav a{
+    color: #f58823;
+    font-weight: normal;
+    margin-left: 1em;
+    transition: 300ms ease-in-out all;
+    font-size: 2.5vw;
+    
+}
+header nav a.activo,
+header nav a:hover{
+    font-size: 3.5vw;
+}
+#burger{
+    position: fixed;
+    top: 2vw;
+    left: 4vw;
+    cursor: pointer;
+    z-index: 10;
+    display: none;
+}
+#burger .barra{
+    width: 1.5rem;
+    height: 0.1rem;
+    margin: 0.3rem;
+    background-color: #f58823;
+    transition: 400ms all ease-in-out;
+}
+#burger.abierto .barra { 
+    background-color: white;
+    
+}
+#burger.abierto .barra.superior {
+    transform: translateY(8px) rotateZ(45deg);
+}
+#burger.abierto .barra.media {
+    width: 0;
+}
+#burger.abierto .barra.inferior {
+    transform: translateY(-8px) rotateZ(-45deg);
+}
+@media(max-width:620px){
+    #burger{
+        display:block;
+    }
+    header{
+        justify-content: flex-end;
+    }
+    header nav{
+        display: none;
+    }
+}
+header.abierto{
+    top: -10vw;
+}
+.menu{
+    width: 100%;
+    height: 100vh;
+    background-color: #f58823;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    padding-top: 40px;
+    transition: all 700ms ease-in-out;
+}
+.menu.abierto{
+    left: 0px;
+}
+.menu nav{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu nav a{
+    padding: 0.6rem;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.1rem;
+    transition: 300ms all ease-in-out;
+}
+.menu nav a:hover{
+    color: white
+}
+/*index*/
+.gridpromos{
+    margin-top: 10vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 430px);
+    grid-gap: 1rem;
+    justify-content: center;
+}
+.gridpaquetes{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 430px);
+    grid-gap: 1rem;
+    justify-content: center;
+}
+
+.envios{
+    display: flex;
+    grid-template-columns: repeat(auto-fit,430px);
+    grid-gap: 1rem;
+    justify-content: center;   
+}
+.mitad{
+    width: 430px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    align-items: center;
+    overflow: hidden;
+}
+.boton{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 60px;
+    border-radius: 0.5rem;
+    background-color: #f58823;
+    box-shadow: 4px 4px 8px gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 1.8rem;
+    line-height: 60px;
+}
+.boton:hover{
+    background-color: #fceee2;
+    color: #f58823;
+    cursor: pointer;
+}
+
+.mitad img{
+    width: 60vw;
+}
+/*paquetes y menu*/
+.paquetes{
+    margin-top: 3vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,400px);
+    grid-gap: 1rem;
+    justify-content: center;
+}
+.imagen{
+    background-color: #f58823;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 15rem;
+    align-items: center;
+    overflow: hidden ;
+}
+.imagen img{
+    margin-top: 6rem;
+}
+.descripcion{
+    margin-top: 10vw;
+}
+/*promociones*/
+#promocion{
+    margin-top: 11vw;
+    text-align: center;
+}
+#promocion h1{
+    font-size: 8vw;
+}
+#promocion a{
+    font-size: 3vw;
+}
+/*footer*/
+footer{
+    margin-top: 2rem;
+    height: auto;
+    background-color: rgb(233, 231, 231);
+}
+footer p{
+    font-size: 0.7rem;
+    color: rgb(77, 77, 77);
+}
+footer .contacto img{
+    margin-top: 3vw;
+    margin-right: 3vw;
+    margin-bottom: 6vw;
+    position: relative;
+    left: 45%;
+    width: 2rem;
+}
+footer .contacto img:hover{
+    cursor: pointer;
+    
+}
+footer .copyright {
+    text-align: center;
+    font-size: 0.5rem;
+}
